@@ -1,0 +1,2 @@
+class ForecastSerializer
+end
