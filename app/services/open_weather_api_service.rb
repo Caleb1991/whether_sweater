@@ -1,8 +1,9 @@
 class OpenWeatherApiService
-  def self.get_weather_for_given_coordinates(latitude, longitude)
+  def self.get_weather_for_given_coordinates(latitude, longitude, units = 'imperial')
     response = Faraday.get('https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid=') do |req|
       req.params['lat'] = latitude
       req.params['lon'] = longitude
+      req.params['units'] = units
       req.params['appid'] = ENV['openweather_api_key']
     end
 
