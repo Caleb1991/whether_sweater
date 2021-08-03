@@ -18,7 +18,25 @@ RSpec.describe 'Forecast API' do
       expect(response).to be_successful
 
       forecast = JSON.parse(response.body, symbolize_names: true)
-      binding.pry
+
+      expect(forecast[:data][:attributes][:five_day_forecast].count).to eq(5)
+      forecast[:data][:attributes][:five_day_forecast].each do |forecast|
+        expect(forecast[:date]).to be_a(String)
+        expect(forecast[:sunrise]).to be_a(String)
+        expect(forecast[:sunset]).to be_a(String)
+        expect(forecast[:conditions]).to be_a(String)
+        expect(forecast[:icon]).to be_a(String)
+        expect(forecast[:high]).to be_a(Float)
+        expect(forecast[:low]).to be_a(Float)
+      end
+
+      expect(forecast[:data][:attributes][:eight_hour_forecast].count).to eq(8)
+      forecast[:data][:attributes][:eight_hour_forecast].each do |forecast|
+        expect(forecast[:date]).to be_a(String)
+        expect(forecast[:conditions]).to be_a(String)
+        expect(forecast[:icon]).to be_a(String)
+        expect(forecast[:temperature]).to be_a(Float)
+      end
     end
   end
 end
