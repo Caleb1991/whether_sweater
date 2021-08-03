@@ -24,7 +24,6 @@ RSpec.describe 'Forecast API' do
       expect(response[:current][:humidity]).to be_an(Integer)
       expect(response[:current][:uvi]).to be_a(Float)
       expect(response[:current][:visibility]).to be_an(Integer)
-      expect(response[:current][:visibility]).to be_an(Integer)
       expect(response[:current][:weather][0][:description]).to be_a(String)
       expect(response[:current][:weather][0][:icon]).to be_a(String)
 
@@ -41,5 +40,5 @@ RSpec.describe 'Forecast API' do
       expect(response[:hourly][0][:weather][0][:description]).to be_a(String)
       expect(response[:hourly][0][:weather][0][:icon]).to be_a(String)
     end
-  end 
+  end
 end
