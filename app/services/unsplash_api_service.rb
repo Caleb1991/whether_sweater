@@ -6,5 +6,7 @@ class UnsplashApiService
       req.params['per_page'] = per_page
       req.params['query'] = search_params
     end
+
+    JSON.parse(response.body, symbolize_names: true)
   end
 end

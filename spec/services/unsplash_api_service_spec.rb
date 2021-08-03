@@ -7,8 +7,11 @@ RSpec.describe UnsplashApiService do
 
       stub_request(:get, "https://api.unsplash.com/search/photos?client_id=aNgJTCW3VkD5RH9Hu1aYsx-OqSd7a2P6v8MVVfI-bAw&per_page=1&query=Denver,CO").
          to_return(status: 200, body: body, headers: {})
-         
-      json = UnsplashApiService.get_image_for_search_query('Denver,CO')
+
+      response = UnsplashApiService.get_image_for_search_query('Denver,CO')
+
+      expect(response[:results][0][:urls][:full]).to be_a(String)
+      expect(response[:results][0][:tags]).to be_an(Array)
     end
   end
 end
