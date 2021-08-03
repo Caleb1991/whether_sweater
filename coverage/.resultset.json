@@ -324,6 +324,7 @@
           1,
           1,
           1,
+          1,
           null,
           null,
           null
@@ -479,6 +480,38 @@
           null
         ]
       },
+      "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/spec/services/unsplash_api_service_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/app/services/unsplash_api_service.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/app/controllers/api/v1/forecasts_controller.rb": {
         "lines": [
           1,
@@ -607,6 +640,6 @@
         ]
       }
     },
-    "timestamp": 1628022339
+    "timestamp": 1628025435
   }
 }
