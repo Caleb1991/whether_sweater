@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/spec/api/v1/requests/forecast_requests_spec.rb": {
+      "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/spec/api/v1/requests/backgrounds_request_spec.rb": {
         "lines": [
           1,
           null,
@@ -17,31 +17,11 @@
           null,
           1,
           null,
-          null,
-          1,
-          null,
-          1,
-          null,
           1,
           null,
           1,
           1,
-          5,
-          5,
-          5,
-          5,
-          5,
-          5,
-          5,
-          null,
-          null,
           1,
-          1,
-          8,
-          8,
-          8,
-          8,
-          null,
           null,
           null,
           null
@@ -330,6 +310,52 @@
           null
         ]
       },
+      "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/spec/api/v1/requests/forecast_requests_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          null,
+          null,
+          1,
+          1,
+          8,
+          8,
+          8,
+          8,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/spec/facades/open_weather_facade_spec.rb": {
         "lines": [
           1,
@@ -506,19 +532,20 @@
           1,
           null,
           1,
-          1,
-          1,
-          1,
-          1,
+          2,
+          2,
+          2,
+          2,
           null,
           null,
-          1,
+          2,
           null,
           null
         ]
       },
-      "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/app/controllers/api/v1/forecasts_controller.rb": {
+      "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/app/controllers/api/v1/backgrounds_controller.rb": {
         "lines": [
+          1,
           1,
           1,
           1,
@@ -534,13 +561,35 @@
           null
         ]
       },
-      "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/app/serializers/forecast_serializer.rb": {
+      "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/app/facades/unsplash_facade.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/app/poros/image_url.rb": {
         "lines": [
           1,
           1,
           null,
           1,
+          1,
           null,
+          null
+        ]
+      },
+      "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/app/serializers/image_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
           1,
           null,
           null,
@@ -554,6 +603,21 @@
           null,
           null,
           null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/app/controllers/api/v1/forecasts_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           null
@@ -643,8 +707,33 @@
           null,
           null
         ]
+      },
+      "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/app/serializers/forecast_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1628026079
+    "timestamp": 1628084307
   }
 }
