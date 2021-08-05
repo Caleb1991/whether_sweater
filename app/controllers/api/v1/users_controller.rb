@@ -10,6 +10,6 @@ class Api::V1::UsersController < ApplicationController
 
   private
   def user_attributes
-    JSON.parse(params['_json'], symbolize_names: true)
+    JSON.parse(request.body.read, symbolize_names: true)
   end
 end
