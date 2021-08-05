@@ -5,7 +5,7 @@ class UserSerializer
         type: 'user',
         attributes:
         {
-          email: user.username,
+          email: user.email,
           api_key: user.api_key
         }
 

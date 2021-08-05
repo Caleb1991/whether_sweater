@@ -449,13 +449,13 @@
           1,
           2,
           2,
-          2,
           null,
           null
         ]
       },
       "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/app/models/user.rb": {
         "lines": [
+          1,
           1,
           1,
           1,
@@ -795,6 +795,6 @@
         ]
       }
     },
-    "timestamp": 1628182870
+    "timestamp": 1628191295
   }
 }
