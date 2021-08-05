@@ -1,6 +1,5 @@
 class Api::V1::UsersController < ApplicationController
   def create
-binding.pry
     user = User.create!(user_attributes)
     if user.save
       render json: UserSerializer.user_creation(user)

@@ -92,6 +92,12 @@
           1,
           null,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
           null
         ]
       },
@@ -364,14 +370,14 @@
           1,
           1,
           null,
-          1,
+          0,
           null,
           null,
           null,
           null,
-          1,
+          0,
           null,
-          1,
+          0,
           null,
           0,
           null,
@@ -432,6 +438,33 @@
           null,
           2,
           null,
+          null
+        ]
+      },
+      "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/spec/models/user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/app/models/user.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
           null
         ]
       },
@@ -759,20 +792,8 @@
           null,
           null
         ]
-      },
-      "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/app/controllers/api/v1/users_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          0,
-          0,
-          null,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1628174183
+    "timestamp": 1628175229
   }
 }
