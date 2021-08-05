@@ -2,6 +2,7 @@ class Api::V1::UsersController < ApplicationController
   def create
     user = User.create!(user_attributes)
     if user.save
+      user.update(api_key: SecureRandom.alphanumeric(16))
       render json: UserSerializer.user_creation(user)
     else
       render error: 'One or more attributes is missing'
