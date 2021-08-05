@@ -4,9 +4,9 @@ class Api::V1::UsersController < ApplicationController
 
     if user.save
       user.update(api_key: SecureRandom.alphanumeric(16))
-      render json: UserSerializer.user_creation(user)
+      render json: UserSerializer.user_creation(user), status: 201
     else
-      render json: { error: user.errors.full_messages }
+      render json: { error: user.errors.full_messages }, status: 409
     end
   end
 
