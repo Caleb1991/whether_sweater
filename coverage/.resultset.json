@@ -312,6 +312,7 @@
           1,
           1,
           1,
+          1,
           null,
           null,
           null
@@ -358,6 +359,21 @@
           8,
           8,
           null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/spec/api/v1/requests/sessions_request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          0,
+          null,
+          0,
           null,
           null,
           null
@@ -795,6 +811,6 @@
         ]
       }
     },
-    "timestamp": 1628191295
+    "timestamp": 1628254810
   }
 }
