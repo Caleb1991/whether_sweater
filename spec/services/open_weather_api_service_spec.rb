@@ -11,8 +11,8 @@ RSpec.describe OpenWeatherApiService do
       coordinates = GeocodingFacade.create_coordinates_object('Denver,CO')
       weather_body = File.read('spec/fixtures/weather_search.json')
 
-      stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall?appid=#{ENV['openweather_api_key']}&exclude=%7Bpart%7D&lat=39.738453&lon=-104.984853&units=imperial").
-          to_return(status: 200, body: weather_body, headers: {})
+      stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall?appid=#{ENV['openweather_api_key']}&lat=39.738453&lon=-104.984853&units=imperial").
+         to_return(status: 200, body: weather_body, headers: {})
 
       response = OpenWeatherApiService.get_weather_for_given_coordinates(coordinates.latitude, coordinates.longitude)
 
@@ -39,6 +39,20 @@ RSpec.describe OpenWeatherApiService do
       expect(response[:hourly][0][:temp]).to be_a(Float)
       expect(response[:hourly][0][:weather][0][:description]).to be_a(String)
       expect(response[:hourly][0][:weather][0][:icon]).to be_a(String)
+    end
+  end
+
+  describe 'get_weather_for_destination_coordinates_upon_arrival' do
+    it 'returns weather for given destination at given time' do
+      weather_body = File.read('spec/fixtures/weather_for_travel_destination.json')
+
+      stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall?appid=78a1bb9c2da4def0f719610a46bf899c&lat=33.448204&lon=-112.072585&units=1628292136").
+         to_return(status: 200, body: weather_body, headers: {})
+
+      json = OpenWeatherApiService.get_weather_for_given_coordinates('33.448204', '-112.072585', '1628292136')
+
+      expect(json[:current][:temp]).to be_a(Float)
+      expect(json[:current][:weather][0][:description]).to be_a(String)
     end
   end
 end

@@ -26,4 +26,16 @@ class ErrorSerializer
 
     }
   end
+
+  def self.invalid_api_key
+    { data:
+      {
+        id: nil,
+        type: 'error(s)',
+        attributes:
+        {
+          errors: 'Your api key is invalid'
+        }
+      }
+    }
 end

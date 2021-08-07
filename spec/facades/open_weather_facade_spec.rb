@@ -11,7 +11,7 @@ RSpec.describe OpenWeatherFacade do
 
       weather_body = File.read('spec/fixtures/weather_search.json')
 
-      stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall?appid=#{ENV['openweather_api_key']}&exclude=%7Bpart%7D&lat=39.738453&lon=-104.984853&units=imperial").
+      stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall?appid=#{ENV['openweather_api_key']}&lat=39.738453&lon=-104.984853&units=imperial").
          to_return(status: 200, body: weather_body, headers: {})
 
       weather = OpenWeatherFacade.create_weather_object('Denver,CO')
