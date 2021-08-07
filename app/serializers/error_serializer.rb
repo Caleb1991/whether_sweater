@@ -39,4 +39,17 @@ class ErrorSerializer
       }
     }
   end
+
+  def self.invalid_location
+    { data:
+      {
+        id: nil,
+        type: 'error(s)',
+        attributes:
+        {
+          errors: 'Invalid location.'
+        }
+      }
+    }
+  end
 end
