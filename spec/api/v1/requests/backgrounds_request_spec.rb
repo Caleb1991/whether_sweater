@@ -18,5 +18,15 @@ RSpec.describe 'Background API Endpoint' do
       expect(image_url[:data][:attributes][:image_url]).to be_a(String)
       expect(image_url[:data][:attributes][:crediting][:disclaimer]).to be_a(String)
     end
+
+    it 'returns an error when location is invalid' do
+      get '/api/v1/backgrounds?location='
+
+      expect(response).to_not be_successful
+
+      error = JSON.parse(response.body, symbolize_names: true)
+
+      expect(error[:data][:attributes][:errors]).to eq('Invalid location.')
+    end
   end
 end
