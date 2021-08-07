@@ -4,7 +4,7 @@ class Api::V1::BackgroundsController < ApplicationController
       image = UnsplashFacade.get_image_url_object(params[:location])
       render json: ImageSerializer.serialize(image, params[:location])
     else
-      render json: ErrorSerializer.invalid_location
+      render json: ErrorSerializer.invalid_location, status: 400
     end
   end
 end

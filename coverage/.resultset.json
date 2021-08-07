@@ -363,6 +363,16 @@
           null,
           null,
           null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
           null
         ]
       },
@@ -715,6 +725,8 @@
           1,
           1,
           null,
+          0,
+          null,
           null,
           null
         ]
@@ -779,8 +791,10 @@
         "lines": [
           1,
           1,
+          2,
           1,
           1,
+          null,
           1,
           null,
           null,
@@ -897,6 +911,65 @@
           null
         ]
       },
+      "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/app/serializers/error_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/calebwittman/turing/mod_3/final_project/whether_sweater/app/poros/route.rb": {
         "lines": [
           1,
@@ -944,6 +1017,6 @@
         ]
       }
     },
-    "timestamp": 1628300119
+    "timestamp": 1628352131
   }
 }

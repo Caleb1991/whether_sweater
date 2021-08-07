@@ -4,7 +4,7 @@ class Api::V1::ForecastsController < ApplicationController
       forecast = OpenWeatherFacade.create_weather_object(params[:location])
       render json: ForecastSerializer.send_weather_package(forecast)
     else
-      render json: ErrorSerializer.invalid_location
+      render json: ErrorSerializer.invalid_location, status: 400
     end
   end
 end

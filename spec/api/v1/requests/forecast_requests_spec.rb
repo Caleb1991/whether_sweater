@@ -39,5 +39,15 @@ RSpec.describe 'Forecast API' do
         expect(forecast[:temperature]).to be_a(Float)
       end
     end
+
+    it 'sends an error when no location is given' do
+      get '/api/v1/forecasts?location='
+
+      expect(response).to_not be_successful
+
+      error = JSON.parse(response.body, symbolize_names: true)
+
+      expect(error[:data][:attributes][:errors]).to eq('Invalid location.')
+    end
   end
 end
