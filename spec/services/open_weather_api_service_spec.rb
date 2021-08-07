@@ -46,7 +46,7 @@ RSpec.describe OpenWeatherApiService do
     it 'returns weather for given destination at given time' do
       weather_body = File.read('spec/fixtures/weather_for_travel_destination.json')
 
-      stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall?appid=78a1bb9c2da4def0f719610a46bf899c&lat=33.448204&lon=-112.072585&units=1628292136").
+      stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall?appid=#{ENV['openweather_api_key']}&lon=-112.072585&units=1628292136").
          to_return(status: 200, body: weather_body, headers: {})
 
       json = OpenWeatherApiService.get_weather_for_given_coordinates('33.448204', '-112.072585', '1628292136')
