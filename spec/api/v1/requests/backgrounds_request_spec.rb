@@ -5,7 +5,7 @@ RSpec.describe 'Background API Endpoint' do
     it 'returns an image url when given location params' do
       body = File.read('spec/fixtures/image_search.json')
 
-      stub_request(:get, "https://api.unsplash.com/search/photos?client_id=aNgJTCW3VkD5RH9Hu1aYsx-OqSd7a2P6v8MVVfI-bAw&per_page=1&query=Denver,CO").
+      stub_request(:get, "https://api.unsplash.com/search/photos?client_id=#{ENV['unsplash_api_key']}&per_page=1&query=Denver,CO").
         to_return(status: 200, body: body, headers: {})
 
       get '/api/v1/backgrounds?location=Denver,CO'
