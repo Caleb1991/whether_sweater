@@ -13,7 +13,7 @@ Sweater weather.... I mean, Whether Sweater is an API that allows you the user t
 Clone this repo
 <p>Run bundle install</p><p>Run bundle exec figaro install</p><p>Run rails db:create</p><p>You will need to get api_keys from the following websites and store them in your application.yml file [OpenWeather] (https://openweathermap.org/api/one-call-api), [GeoCoding] (https://developer.mapquest.com/documentation/geocoding-api/), [Unsplash] (https://unsplash.com/documentation)</p>
 
-#Endpoints
+# Endpoints
 <p> 'Http://localhost:3000' </p>
 <p>GET '/api/v1/forecast?location={location}' </p>
 <p> Location must be sent as 'Denver,CO' or 'Phoenix,AZ'. Returns current forecast for given location, including next five days and next eight hours.</p>
