@@ -5,7 +5,4 @@ Sweater weather.... I mean, Whether Sweater is an application that allows you th
 # Setup
 
 Clone this repo
-<p>Run bundle install</p>
-<p>Run bundle exec figaro install</p>
-<p>Run rails db:create</p>
-<p>You will need to get api_keys from the following websites and store them in your application.yml file [OpenWeather] (https://openweathermap.org/api/one-call-api), [GeoCoding] (https://developer.mapquest.com/documentation/geocoding-api/), [Unsplash] (https://unsplash.com/documentation)</p>
+<p>Run bundle install</p><p>Run bundle exec figaro install</p><p>Run rails db:create</p><p>You will need to get api_keys from the following websites and store them in your application.yml file [OpenWeather] (https://openweathermap.org/api/one-call-api), [GeoCoding] (https://developer.mapquest.com/documentation/geocoding-api/), [Unsplash] (https://unsplash.com/documentation)</p>
