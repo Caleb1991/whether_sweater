@@ -43,11 +43,6 @@ Run `rails db:create`<br><br>
 * [Unsplash](https://unsplash.com/documentation)<br>
   
 <strong>and store them in your application.yml file:</strong>
-   ```sh
-   #config/application.yml
-   
-   API_KEY = 'ENTER YOUR API'
-   ``` 
 
 <!-- Endpoints -->
 ## Endpoints
