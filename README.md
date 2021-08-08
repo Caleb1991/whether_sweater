@@ -5,6 +5,6 @@ Sweater weather.... I mean, Whether Sweater is an application that allows you th
 # Setup
 
 Clone this repo
-Run bundle install
+<p>Run bundle install</p>
 Run bundle exec figaro install
 Run rails db:create
