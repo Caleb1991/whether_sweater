@@ -15,7 +15,7 @@ Clone this repo
 
 # Endpoints
 <p> 'Http://localhost:3000' </p>
-### GET '/api/v1/forecast?location={location}'
+**GET '/api/v1/forecast?location={location}'**
 <p> Location must be sent as 'Denver,CO' or 'Phoenix,AZ'. Returns current forecast for given location, including next five days and next eight hours.</p>
 ### GET '/api/v1/backgrounds?location={location}'
 <p> Location must be sent as 'Denver,CO' or 'Pheonix,AZ'. Returns url of a background image to display for given location</p>
