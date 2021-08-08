@@ -24,3 +24,4 @@ Clone this repo
 <p>## POST '/api/v1/sessions' </p>
 <p>A post request can be sent to the above uri, sending over email and password in the body of the request as JSON. If successful, it will return the given user's email and api_key</p>
 <p>## POST '/api/v1/road_trip' </p>
+<p> a post request can be sent to the above uri, sending over an origin (ex. 'Denver,CO), a destination (ex. 'Phoenix,AZ), and a valid api key in the body of the request. If the locations are able to be traversed via car, and the api key is valid, the response will send the destination and origin city, total travel time, and estimated weather upon arrival at destination city </p>
