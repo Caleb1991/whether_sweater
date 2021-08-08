@@ -8,3 +8,4 @@ Clone this repo
 <p>Run bundle install</p>
 <p>Run bundle exec figaro install</p>
 <p>Run rails db:create</p>
+<p>You will need to get api_keys from the following websites and stor them in your application.yml file [OpenWeather](https://openweathermap.org/api/one-call-api), [GeoCoding](https://developer.mapquest.com/documentation/geocoding-api/), [Unsplash](https://unsplash.com/documentation)</p>
