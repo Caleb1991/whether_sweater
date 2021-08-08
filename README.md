@@ -15,13 +15,13 @@ Clone this repo
 
 # Endpoints
 <p> 'Http://localhost:3000' </p>
-<p>## GET '/api/v1/forecast?location={location}' </p>
+### GET '/api/v1/forecast?location={location}'
 <p> Location must be sent as 'Denver,CO' or 'Phoenix,AZ'. Returns current forecast for given location, including next five days and next eight hours.</p>
-<p> ## GET '/api/v1/backgrounds?location={location}'</p>
+### GET '/api/v1/backgrounds?location={location}'
 <p> Location must be sent as 'Denver,CO' or 'Pheonix,AZ'. Returns url of a background image to display for given location</p>
-<p>## POST '/api/v1/users' </p>
+### POST '/api/v1/users'
 <p>A post request can be sent to the above uri, sending over the email, password, and password confirmation in the body of the request as JSON. If successful, it will return the user's email and the api key they have been issued.</p>
-<p>## POST '/api/v1/sessions' </p>
+### POST '/api/v1/sessions'
 <p>A post request can be sent to the above uri, sending over email and password in the body of the request as JSON. If successful, it will return the given user's email and api_key</p>
-<p>## POST '/api/v1/road_trip' </p>
+### POST '/api/v1/road_trip'
 <p> a post request can be sent to the above uri, sending over an origin (ex. 'Denver,CO), a destination (ex. 'Phoenix,AZ), and a valid api key in the body of the request. If the locations are able to be traversed via car, and the api key is valid, the response will send the destination and origin city, total travel time, and estimated weather upon arrival at destination city </p>
