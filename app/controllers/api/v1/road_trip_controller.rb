@@ -6,7 +6,7 @@ class Api::V1::RoadTripController < ApplicationController
       road_trip_object = RoadTripFacade.plan_road_trip(road_trip_attributes)
 
       if road_trip_object.travel_time.nil?
-        render json: RoadTripSerializer.invalid_destination(road_trip_object)
+        render json: RoadTripSerializer.invalid_destination(road_trip_object), status: 401
       else
         render json: RoadTripSerializer.valid_destination(road_trip_object)
       end

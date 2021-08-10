@@ -44,4 +44,40 @@ end
   expect(json[:data][:attributes][:weather_at_eta][:temperature]).to be_a(Float)
   expect(json[:data][:attributes][:weather_at_eta][:conditions]).to be_a(String)
   end
+
+  it 'sends error if bad api key' do
+    WebMock.allow_net_connect!
+
+    road_trip_payload = {
+  origin: "Denver,CO",
+  destination: "Phoenix,AZ",
+  api_key: 1
+  }
+
+    post '/api/v1/road_trip', params: road_trip_payload, as: :json
+
+    expect(response).to_not be_successful
+
+    errors = JSON.parse(response.body, symbolize_names: true)
+
+    expect(errors[:data][:attributes][:errors]).to eq('Your api key is invalid')
+  end
+
+  it 'sends an error if location is unreachable by car' do
+    WebMock.allow_net_connect!
+
+    road_trip_payload = {
+  origin: "Denver,CO",
+  destination: "London,England",
+  api_key: User.last.api_key
+  }
+
+    post '/api/v1/road_trip', params: road_trip_payload, as: :json
+
+    expect(response).to_not be_successful
+
+    errors = JSON.parse(response.body, symbolize_names: true)
+
+    expect(errors[:data][:attributes][:travel_time]).to eq('Impossible destination')
+  end
 end
