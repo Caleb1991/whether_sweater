@@ -42,12 +42,7 @@ Run `rails db:create`<br><br>
 * [GeoCoding](https://developer.mapquest.com/documentation/geocoding-api/)<br>
 * [Unsplash](https://unsplash.com/documentation)<br>
   
-<strong>and store them in your application.yml file:</strong>
-   ```sh
-   #config/application.yml
-   
-   API_KEY = 'ENTER YOUR API'
-   ``` 
+<strong>and store them in your application.yml file.</strong>
 
 <!-- Endpoints -->
 ## Endpoints
