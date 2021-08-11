@@ -21,6 +21,7 @@ RSpec.describe 'Sessions API' do
 
       expect(json[:data][:attributes][:email]).to eq('Roald91')
       expect(json[:data][:attributes][:api_key]).to eq(User.last.api_key)
+      expect(json[:data][:attributes]).to_not have_key(:password)
     end
 
     it "doesn't log a user in if bad credentials" do
@@ -31,6 +32,8 @@ RSpec.describe 'Sessions API' do
       json = JSON.parse(response.body, symbolize_names: true)
 
       expect(json[:data][:attributes][:errors]).to eq("Your password or email is incorrect.")
+      expect(json[:data][:attributes]).to_not have_key([:email])
+      expect(json[:data][:attributes]).to_not have_key([:api_key])
     end
   end
 end

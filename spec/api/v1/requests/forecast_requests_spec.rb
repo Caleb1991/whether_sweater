@@ -29,6 +29,11 @@ RSpec.describe 'Forecast API' do
         expect(forecast[:icon]).to be_a(String)
         expect(forecast[:high]).to be_a(Float)
         expect(forecast[:low]).to be_a(Float)
+        expect(forecast).to_not have_key(:temperature)
+        expect(forecast).to_not have_key(:feels_like)
+        expect(forecast).to_not have_key(:humidity)
+        expect(forecast).to_not have_key(:uvi)
+        expect(forecast).to_not have_key(:visibility)
       end
 
       expect(forecast[:data][:attributes][:eight_hour_forecast].count).to eq(8)
@@ -37,6 +42,10 @@ RSpec.describe 'Forecast API' do
         expect(forecast[:conditions]).to be_a(String)
         expect(forecast[:icon]).to be_a(String)
         expect(forecast[:temperature]).to be_a(Float)
+        expect(forecast).to_not have_key(:feels_like)
+        expect(forecast).to_not have_key(:humidity)
+        expect(forecast).to_not have_key(:uvi)
+        expect(forecast).to_not have_key(:visibility)
       end
     end
 

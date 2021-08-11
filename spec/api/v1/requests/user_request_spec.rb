@@ -39,6 +39,8 @@ RSpec.describe 'User API' do
     error_message = JSON.parse(response.body, symbolize_names: true)
 
     expect(error_message[:data][:attributes][:errors]).to eq(["Password confirmation doesn't match Password"])
+    expect(error_message[:data][:attributes]).to_not have_key([:email])
+    expect(error_message[:data][:attributes]).to_not have_key([:api_key])
   end
 
 end

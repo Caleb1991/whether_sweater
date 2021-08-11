@@ -43,6 +43,8 @@ end
   expect(json[:data][:attributes][:end_city]).to eq('Phoenix,AZ')
   expect(json[:data][:attributes][:weather_at_eta][:temperature]).to be_a(Float)
   expect(json[:data][:attributes][:weather_at_eta][:conditions]).to be_a(String)
+  expect(json[:data][:attributes][:weather_at_eta]).to_not have_key(:uvi)
+  expect(json[:data][:attributes][:weather_at_eta]).to_not have_key(:feels_like)
   end
 
   it 'sends error if bad api key' do
@@ -61,6 +63,7 @@ end
     errors = JSON.parse(response.body, symbolize_names: true)
 
     expect(errors[:data][:attributes][:errors]).to eq('Your api key is invalid')
+    expect(errors[:data][:attributes]).to_not have_key(:weather_at_eta)
   end
 
   it 'sends an error if location is unreachable by car' do
@@ -79,5 +82,7 @@ end
     errors = JSON.parse(response.body, symbolize_names: true)
 
     expect(errors[:data][:attributes][:travel_time]).to eq('Impossible destination')
+    expect(errors[:data][:attributes][:weather_at_eta]).to_not have_key(:temperature)
+    expect(errors[:data][:attributes][:weather_at_eta]).to_not have_key(:conditions)
   end
 end

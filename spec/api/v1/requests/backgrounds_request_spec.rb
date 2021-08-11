@@ -27,6 +27,9 @@ RSpec.describe 'Background API Endpoint' do
       error = JSON.parse(response.body, symbolize_names: true)
 
       expect(error[:data][:attributes][:errors]).to eq('Invalid location.')
+      expect(error[:data][:attributes]).to_not have_key(:location)
+      expect(error[:data][:attributes]).to_not have_key(:image_url)
+      expect(error[:data][:attributes]).to_not have_key(:crediting)
     end
   end
 end
