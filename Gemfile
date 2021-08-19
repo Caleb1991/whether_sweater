@@ -30,7 +30,6 @@ gem 'faraday'
 gem 'date'
 gem 'securerandom'
 gem 'bcrypt'
-gem 'travis'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
@@ -42,6 +41,7 @@ group :development, :test do
   gem 'pry'
   gem 'capybara'
   gem 'shoulda-matchers'
+  gem 'travis'
 end
 
 group :development do
