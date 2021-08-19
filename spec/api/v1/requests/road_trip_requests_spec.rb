@@ -68,7 +68,6 @@ end
 
   it 'sends an error if location is unreachable by car' do
     WebMock.allow_net_connect!
-    #test ci
 
     road_trip_payload = {
   origin: "Denver,CO",
