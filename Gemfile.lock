@@ -252,6 +252,8 @@ DEPENDENCIES
   pry
   puma (~> 3.11)
   rails (~> 5.2.5)
+  railties
+  rspec-core
   rspec-rails
   securerandom
   shoulda-matchers
