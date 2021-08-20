@@ -1,8 +1,13 @@
 language: ruby
 rbenv:
 - 2.7.2
-addons:
-  postgresql: 9.6
+services:
+  - postgresql
+before_install:
+  - gem install bundler
+before_script:
+  - bundle install
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate
 script:
-- bundle exec rails db:{create,migrate} RAILS_ENV=test
-- bundle exec rspec
+  - bundle exec rspec
