@@ -41,6 +41,7 @@ group :development, :test do
   gem 'pry'
   gem 'capybara'
   gem 'shoulda-matchers'
+  gem 'travis'
 end
 
 group :development do

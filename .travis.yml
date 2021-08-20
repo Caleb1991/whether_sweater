@@ -1,0 +1,13 @@
+language: ruby
+rbenv:
+- 2.7.2
+services:
+  - postgresql
+before_install:
+  - gem install bundler
+before_script:
+  - bundle install
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate
+script:
+  - bundle exec rspec
